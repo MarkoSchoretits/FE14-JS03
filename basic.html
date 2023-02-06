@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSexercises basic</title>
+</head>
+<body>
+    
+    <script>
+        // exercise 1
+/*         numbers = [1, 7, -3, 9];
+        let max = numbers[0];
+        for (let n of numbers) {
+            if (n > max) {
+                max = n;
+            }
+            console.log(n, max);
+        }
+        console.log (max);
+ */
+
+        // exercise 1b
+        numbers = [1, 7, -3, 9];
+        let max = numbers[0];
+        numbers.forEach((n, i) => {
+            if (n > max) {
+                max = n;
+            }
+            console.log(`i=${i}, n=${n}, max=${max}`);
+        });
+
+    </script>
+</body>
+</html>
