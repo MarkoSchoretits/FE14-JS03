@@ -8,13 +8,47 @@
 </head>
 <body>
     <h1>Temperature Analysis</h1>
-    <p>Here be discription of app</p>
-    <img src="imgsrc" alt="imgalt">
-    <p>Today it's 20°.</p>
-    <p>That's hot!</p>
+    <p>Here be discription of app.</p>
+    <img 
+        style="width: 100%" 
+        id="unbuttonPic" 
+        src="" 
+        alt="PicDummy">
+    <p id="displayTemp">Today it's 20°.</p>
+    <p id="displayEval">That's hot!</p>
 
     <script>
+        var temp = Math.random() * 80 - 30;
+        temp = Math.round (temp * 10) /10;
+//        console.log (temp);
+        var eval;
+        var pic;
+        if (temp > 0) {
+            if (temp > 15) {
+                if (temp > 30) {
+                    eval = "The Ethiopian unbuttons his shirt.";
+                    pic = "https://cdn.pixabay.com/photo/2016/11/07/01/14/ethiopian-1804653_960_720.jpg";
+                }
+                else {
+                    eval = "The Spaniard unbuttons his shirt.";
+                    pic = "https://cdn.pixabay.com/photo/2019/03/01/05/27/sunset-4027373__340.jpg";
+                }
+            }
+            else {
+                eval = "The Austrian unbuttons his shirt.";
+                pic = "https://cdn.pixabay.com/photo/2014/11/29/18/39/austrians-550717_960_720.jpg";
+            }
+        }
+        else {
+            eval = "The Eskimo unbuttens his shirt.";
+            pic = "https://cdn.pixabay.com/photo/2015/08/26/17/49/greenlanders-908841_960_720.jpg";
+        }
+//        console.log (eval);
+//        console.log (pic);
         
+        document.getElementById("unbuttonPic").src=pic;
+        document.getElementById("displayTemp").innerHTML = (`It's ${temp}° today.`);
+        document.getElementById("displayEval").innerHTML = eval;
     </script>
     
 </body>
